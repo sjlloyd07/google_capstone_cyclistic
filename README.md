@@ -58,7 +58,22 @@ Identify trends of how casual riders and Cyclistic members used bikes over the p
 
 
 ### Prepare
-The data consists of internal Cyclistic user transaction records that have had all identifying factors removed.  The datasets being used consist of monthly transaction records in the form of 13 .csv files from the months of March 2022 to March 2023 that were downloaded to local storage from the [host website](https://divvy-tripdata.s3.amazonaws.com/index.html).
+The data consists of internal Cyclistic user transaction records that have had all identifying factors removed.  The datasets being used consist of monthly transaction records in the form of 13 .csv files from the months of March 2022 to March 2023 that were downloaded to local storage from the [host website](https://divvy-tripdata.s3.amazonaws.com/index.html) using a python script found [here](capstone_scrape.py).  Each data file was then unzipped and consolidated into one folder.  One at a time, each .csv file was loaded into Excel with Power Query for initial evaluation. 
+
+Each .csv file contained raw data stored in 13 fields formatted below as detected by Power Query: 
+| ride_id | rideable_type	| started_at | ended_at	| start_station_name	| start_station_id	|end_station_name	| end_station_id	| start_lat	| start_lng	| end_lat	| end_lng	| member_casual |
+| --- | ---	| --- | ---	| ---	| ---	| ---	| ---	| ---	| ---	| ---	| ---	| --- |
+| *text* | *text*	| *datetime* | *datetime*	| *text*	| *text*	| *text*	| *text*	| *decimal number*	| *decimal number*	| *decimal number*	| *decimal number*	| *decimal text* |
+
+The field ***ride_id*** contains unique values and is the primary key of each dataset.
+
+The data was transormed in Power Query to filter out the following fields that contained values irrelevant for this analysis: 
+| start_station_id	| end_station_id	| start_lat	| start_lng	| end_lat	| end_lng	|
+| ---	| ---	| ---	| ---	| --- | --- |
+
+The remaining data fields below were then ready for further cleaning and manipulation.
+| ride_id | rideable_type	| started_at | ended_at	| start_station_name	| end_station_name	| member_casual |
+| --- | ---	| --- | ---	| ---	| ---	| ---	|
 
 The data is:
 - **reliable** - consists of records from the total population that were taken using unbiased methods (non-identifying timestamped transactions)
@@ -67,48 +82,34 @@ The data is:
 - **current** - up-to-date to the month previous to the beginning of this analysis
 - **cited** - acquired using internally defined, trustworthy methods of collection
 
-The 13 .csv files were converted into .xlsx spreadsheet files in order to use Microsoft Excel for cleaning, manipulation, analysis, and visualization of the data.  The spreadsheet files contain raw data stored in 13 columns/fields: 
-| ride_id | rideable_type	| started_at | ended_at	| start_station_name	| start_station_id	|end_station_name	| end_station_id	| start_lat	| start_lng	| end_lat	| end_lng	| member_casual |
-| --- | ---	| --- | ---	| ---	| ---	| ---	| ---	| ---	| ---	| ---	| ---	| --- |
-| *text* | *text*	| *datetime* | *datetime*	| *text*	| *text*	| *text*	| *text*	| *number*	| *number*	| *number*	| *number*	| *text* |
-
-Initial evaluation of the data showed that the location data fields were missing values.  Records containing missing values accounted for up to 20% of the dataset and removing them may have significant impact on analysis results.  At this time, location data will not be evaluated in this analysis.  The following analysis focuses on customer product type use and time periods of use.
-
-The geolocation data stored in columns *start_station_nam, start_station_id, end_station_name, end_id, start_lat, start_lng, end_lat,* and *end_lng* was determined to be too incomplete for reliable analysis.  These columns were filtered out, and the resulting dataset consisted of *ride_id, rideable_type, started_at, ended_at,* and *member_casusal*.
-
-
 ### Process
-Microsoft Excel was used to clean and manipulate the data.  For every dataset spreadsheet, the sheet containing raw data was copied to a new sheet in the workbook for cleaning/manipulation in order to leave the raw data intact.  The following actions were performed on each spreadsheet of the dataset.
+The Microsoft Power Query Editor was used to further transform the raw dataset into a spreadsheet ready for analysis.  After filtering out the initially identified unneccessary fields, the columns containing the calculated values below were added using tools in the "Add Column" tab in ordered to get the desired metrics from the data.
+
+| field | description | 
+| --- | ---	| 
+| ride_length | "Custom Column" tool used to input a formula to calculate length of ride (in minutes) (=*ended_at - started_at*) | 
+| hour_of_day | "Time" tool used to extract start of hour values from selected *started_at* field |
+| date | "Date" tool used to extract the short date from selected *started_at* field | 
+
+Fields *started_at* and *ended_at* were no longer necessary and removed from the query using the "Choose Columns" tool.
+
+
+The resulting 8 fields were then loaded into the spreadsheet as columns ordered below:
+| ride_id | rideable_type	| date | hour_of_day | ride_length	| start_station_name	| end_station_name	| member_casual |
+| --- | ---	| --- | ---	| ---	| ---	| ---	| ---	|
+
+| day_of_week | day of week number extracted from *started_at* using (=*WEEKDAY()*)	| 
 
 #### Cleaning
 
-Visual exmamination and the value filtering function were performed on each column to confirm all formatting was consistent and conforming.
+Once the datasets were in spreadsheet form, they were checked for duplicate records w/ the *remove duplicates* Excel feature (no duplicates found).  Further visual exmamination and the filtering tool were performed on each column to confirm all cells had consistent formatting and conforming values.
 
 ***ride_id***
-- field contains unique values (primary key of dataset)
-- values are a mix of alphanumeric general formatting and scientific notation numbers of different lengths
-- the nonconforming scientific notation values were imputed as unreliable and deleted w/o significant statistical effects
-  - new *check column* inserted next to *ride_id* for *ride_id* value calculations
-  - all *ride_id* values were check for formatting w/ the *=istext()* function
-  - the *check* column was filtered to show check values that returned FALSE (*ride_id* contained non-conforming numeric data) and deleted
-- the *check* column values were then changed to check the character length of each *ride_id* values using the *=len()* function (16 character length is conforming)
-- the results showed all remainging *ride_id* values conformed
-
-| filename | non-conforming records deleted	|
-| --- | ---	|
-| 202203-divvy-tripdata-clean | 190 |
-| 202204-divvy-tripdata-clean | 249 |
-| 202205-divvy-tripdata-clean	| 412 |
-| 202206-divvy-tripdata-clean	| 512 |
-| 202207-divvy-tripdata-clean	| 543 |
-| 202208-divvy-tripdata-clean	| 529 |
-| 202209-divvy-tripdata-clean	| 463 |
-| 202210-divvy-tripdata-clean	| 404 |
-| 202211-divvy-tripdata-clean	| 216 |
-| 202212-divvy-tripdata-clean	| 119 |
-| 202301-divvy-tripdata-clean	| 127 |
-| 202302-divvy-tripdata-clean	| 140 |
-| 202303-divvy-tripdata-clean	| 169 |
+- values appeared to be unique 16 character alphanumeric values
+-	column filter and sort features were used to inspect that all column values conform to the same standard
+-	inserted new *check* column to the right of *ride_id* for further value checking
+-	confirmed all *ride_id* cells had character lengths of 16 using the *=len()* function and filter
+-	deleted *check* column when finished
 
 *rideable_type, member_casusal*
 - expected and confirmed to correctly be *text* formatted
@@ -116,23 +117,29 @@ Visual exmamination and the value filtering function were performed on each colu
 *started_at, ended_at*
 - expected and confirmed to correctly be *datetime* formatted
 
-- spreadsheet is checked for duplicate records w/ the *remove duplicates* Excel feature (no duplicates found)
+*date*
+- short date format
+
+*hour_of_day*
+- date/time format
+
+*ride_length*
+- time format 37:30:55 (hh:mm:ss)
 
 
 #### Manipulation
 
-In order to perform the desired analysis on the data, addtional columns containing calculated values were added to the spreadsheets.
+After cleaning, another calculated row was added that could not be reasonably done in the Power Query Editory.
 
-- column *ride_length* was added that contained the calculated duration of each ride record (*= ended_at - started_at*)
-  - time format hh:mm:ss
-- column *day_of_week* was added to extract the weekday number from each *started_at* value using the *=WEEKDAY()* function
-  - number format
-- column *hour_of_day* was added to extract the time to the full hour from each *started_at* value using *=TIME(HOUR(started_at),0,0)*
-  - time format HH:MM AM/PM
-- column *date* was added to extract the date from each *started_at* value using *=ROUNDDOWN(started_at),0)*
-  - short date format m:dd:yyyy
+| field | description | 
+| --- | ---	| 
+| day_of_week | calculated the weekday number from each *started_at* value using the *=WEEKDAY()* function | 
 
-After all new columns were added, the newly calculated cells containing formulas were replaced w/ the calculated values they contained.
+After all new column was added, the newly calculated cells containing formulas was replaced w/ the calculated values they contained using *Copy / Paste Values*.
+
+The final spreadsheets ready for consolidation and analysis contain the columns below:
+| ride_id | rideable_type	| date | day_of_week | hour_of_day | ride_length	| start_station_name	| end_station_name	| member_casual |
+| --- | ---	| --- | ---	| ---	| ---	| ---	| ---	| ---	|
 
 
 ### Analysis
