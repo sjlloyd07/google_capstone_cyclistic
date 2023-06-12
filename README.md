@@ -100,22 +100,23 @@ The resulting 8 fields were then loaded into the spreadsheet as columns ordered 
 
 | day_of_week | day of week number extracted from *started_at* using (=*WEEKDAY()*)	| 
 
+This process was applied identically to every dataset by copying the code from the first Power Query Advanced Editor and pasting it into every subsequently loaded dataset Power Query Editor Advanced Editor and changing the source filename before proceeding.
+
 #### Cleaning
 
 Once the datasets were in spreadsheet form, they were checked for duplicate records w/ the *remove duplicates* Excel feature (no duplicates found).  Further visual exmamination and the filtering tool were performed on each column to confirm all cells had consistent formatting and conforming values.
 
 ***ride_id***
-- values appeared to be unique 16 character alphanumeric values
+- appeared to be unique 16 character alphanumeric values
 -	column filter and sort features were used to inspect that all column values conform to the same standard
 -	inserted new *check* column to the right of *ride_id* for further value checking
 -	confirmed all *ride_id* cells had character lengths of 16 using the *=len()* function and filter
--	deleted *check* column when finished
+  - one dataset was found to contain non-conforming values stored in "text" format incorrectly representing scientific notation values
+  - Further investigation revealed 169 *ride_id* values w/ non-conforming characteristics stored incorrectly in the raw data for March 2023 (filename: 202303-divvy-tripset).  Without a way to correct these records, they were deleted from the dataset.
+-	*check* column was deleted after all datasets were checked
 
 *rideable_type, member_casusal*
-- expected and confirmed to correctly be *text* formatted
-
-*started_at, ended_at*
-- expected and confirmed to correctly be *datetime* formatted
+- expected, conforming values
 
 *date*
 - short date format
@@ -125,6 +126,19 @@ Once the datasets were in spreadsheet form, they were checked for duplicate reco
 
 *ride_length*
 - time format 37:30:55 (hh:mm:ss)
+- invalid values (impossible calculations) were found and removed from the files below
+
+| filename | records deleted | 
+| --- | ---	| 
+| 202203-divvy-tripdata | 2 |
+| 202205-divvy-tripdata | 1 |
+| 202206-divvy-tripdata | 12 |
+| 202207-divvy-tripdata | 16 |
+| 202208-divvy-tripdata | 15 |
+| 202209-divvy-tripdata | 9 |
+| 202210-divvy-tripdata | 4 |
+| 202211-divvy-tripdata | 41 |
+| 202302-divvy-tripdata | 2 |
 
 
 #### Manipulation
@@ -133,13 +147,14 @@ After cleaning, another calculated row was added that could not be reasonably do
 
 | field | description | 
 | --- | ---	| 
-| day_of_week | calculated the weekday number from each *started_at* value using the *=WEEKDAY()* function | 
+| day_of_week | calculated the weekday number from each *started_at* value using the *=WEEKDAY()* function, format as "general" | 
 
-After all new column was added, the newly calculated cells containing formulas was replaced w/ the calculated values they contained using *Copy / Paste Values*.
+After the new column was added, the newly calculated column containing formulas was replaced w/ the calculated values they contained using *Copy / Paste Values*.
 
 The final spreadsheets ready for consolidation and analysis contain the columns below:
 | ride_id | rideable_type	| date | day_of_week | hour_of_day | ride_length	| start_station_name	| end_station_name	| member_casual |
 | --- | ---	| --- | ---	| ---	| ---	| ---	| ---	| ---	|
+
 
 
 ### Analysis
