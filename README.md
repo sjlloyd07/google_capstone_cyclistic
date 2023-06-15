@@ -159,7 +159,8 @@ The final spreadsheets ready for consolidation and analysis contain the columns 
 
 ### Analysis
 
-The datasets were consolidated into a PivotTable by using a Power Query to connect to the folder in which all the spreadsheets are located, and combining them into 
+Power Query was used to consolidate the data into a pivot table.  The analysis was focused on the Cyclistic membership status variable of which two values were compared - member/casual - and was performed on the final dataset that contained 6,087,365 records.
+
 
 
 
