@@ -178,8 +178,7 @@ Members and casuals followed a slightly difference trend in an average 24 hour d
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/4bab800f-6141-4132-8327-3ab1a0588e97)
 
-The average casual ride duration (ride length) was more than double the average ride duration of members.
+For every month of the year, the casual average ride length (in minutes) was more than double the member average ride length.
 
-![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/644cd0e0-b2c0-43e7-99fb-aa320e3db0fa)
-
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/56c1b78b-8a11-4785-9517-a4bcdd1de16b)
 
