@@ -170,6 +170,9 @@ Members took more rides than casual in every month of the year.  Rides taken by 
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ec0acbf7-378d-4d34-b2ac-0809aa9889fa)
 
+Members and casuals had the least difference in total rides taken over the weekend - less than 2% - and Sunday is the only day of the week that casuals had more rides than members.  Throughout the week, rides taken by both groups had an inverse relationship with member rides increasing and peaking in the middle of the week and casual rides declining to the lowest levels during the same time period.
+
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/2dbcbc08-ca51-4491-ba25-d22c088216fc)
 
 
 
