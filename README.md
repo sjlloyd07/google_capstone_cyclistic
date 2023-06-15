@@ -175,6 +175,9 @@ Members and casuals had the least difference in total rides taken over the weeke
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/2dbcbc08-ca51-4491-ba25-d22c088216fc)
 
 
+Members and casuals followed a slightly difference trend in an average 24 hour day.  Casual total rides increased gradually through the morning hours and peaked at 5 pm.  Member rides also peaked at 5 pm, but a ride spike was also observed at 8 am before dropping and increasing again in the afternoon.
+
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/4bab800f-6141-4132-8327-3ab1a0588e97)
 
 
 
