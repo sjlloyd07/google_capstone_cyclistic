@@ -186,3 +186,5 @@ Member rides were evenly split between electric and class bikes, while casual ri
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/b7413f69-7b9b-4e0e-9beb-711d294e3f83)
 
+#### Central Tendency
+
