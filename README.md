@@ -159,7 +159,16 @@ The final spreadsheets ready for consolidation and analysis contain the columns 
 
 ### Analysis
 
-Power Query was used to consolidate the data into a pivot table.  The analysis was focused on the Cyclistic membership status variable of which two values were compared - member/casual - and was performed on the final dataset that contained 6,087,365 records.
+Power Query was used to consolidate the data into a pivot table.  The analysis was focused on the Cyclistic ride user status variable of which two values were compared - *member* and *casual* - and was performed on the final dataset that contained **6,087,365** records that were taken between **March 2022** and **March 2023**.
+
+#### Frequency
+Cyclistic members (member) took 20% more rides over the time period than Cyclistic casual riders (casual).
+
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/8d515013-973d-4ac4-93e9-abac8f59c603)
+
+Members took more rides than casual in every month of the year.  Rides taken by both groups followed a similar trend over the year with the fewest number of rides taken during the winter months and a gradual increase through the spring and peaking in the summer months.  The smallest difference between total rides of both groups was in July - less than 2%, and the greatest difference - almost 60% - was in January.
+
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ec0acbf7-378d-4d34-b2ac-0809aa9889fa)
 
 
 
