@@ -182,3 +182,7 @@ For every month of the year, the casual average ride length (in minutes) was mor
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/56c1b78b-8a11-4785-9517-a4bcdd1de16b)
 
+Member rides were evenly split between electric and class bikes, while casual rides had a slight preference for electric bikes.
+
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/b7413f69-7b9b-4e0e-9beb-711d294e3f83)
+
