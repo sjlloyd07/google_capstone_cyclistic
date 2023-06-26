@@ -189,3 +189,7 @@ Member rides were evenly split between electric and classic bikes, while casual 
 #### Central Tendency
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ef93faea-bfc5-4304-a8d3-c0a3c91519d6)
 
+
+### Share
+
+
