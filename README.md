@@ -12,7 +12,7 @@ and annual memberships. Customers who purchase single-ride or full-day passes ar
 who purchase annual memberships are Cyclistic members.
 
 Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the
-pricing flexibility helps Cyclistic attract more customers, Moreno believes that maximizing the number of annual members will
+pricing flexibility helps Cyclistic attract more customers, the Director of Marketing, Lily Moreno, believes that maximizing the number of annual members will
 be key to future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno believes there is a
 very good chance to convert casual riders into members. She notes that casual riders are already aware of the Cyclistic
 program and have chosen Cyclistic for their mobility needs.
@@ -98,8 +98,6 @@ The resulting 8 fields were then loaded into the spreadsheet as columns ordered 
 | ride_id | rideable_type	| date | hour_of_day | ride_length	| start_station_name	| end_station_name	| member_casual |
 | --- | ---	| --- | ---	| ---	| ---	| ---	| ---	|
 
-| day_of_week | day of week number extracted from *started_at* using (=*WEEKDAY()*)	| 
-
 This process was applied identically to every dataset by copying the code from the first Power Query Advanced Editor and pasting it into every subsequently loaded dataset Power Query Editor Advanced Editor and changing the source filename before proceeding.
 
 #### Cleaning
@@ -159,32 +157,35 @@ The final spreadsheets ready for consolidation and analysis contain the columns 
 
 ### Analysis
 
-Power Query was used to consolidate the data into a pivot table.  The analysis was focused on the Cyclistic ride user status variable of which two values were compared - *member* and *casual* - and was performed on the final dataset that contained **6,087,365** records that were taken between **March 2022** and **March 2023**.
+Power Query was used to consolidate the data into a pivot table.  The analysis was focused on the Cyclistic ride user status recorded in the *member_casual* column of which the variable could be one of two values - *member* or *casual*. Analysis was performed on the final dataset that contained **6,087,365** records that were taken between **March 2022** and **March 2023**.
 
 #### Frequency
 Cyclistic members (member) took 20% more rides over the time period than Cyclistic casual riders (casual).
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/8d515013-973d-4ac4-93e9-abac8f59c603)
 
-Members took more rides than casual in every month of the year.  Rides taken by both groups followed a similar trend over the year with the fewest number of rides taken during the winter months and a gradual increase through the spring and peaking in the summer months.  The smallest difference between total rides of both groups was in July - less than 2%, and the greatest difference - almost 60% - was in January.
+Members took more rides than casual riders in every month of the year.  Rides taken by both groups followed a similar trend over the year - the fewest number of rides were taken during the winter months and increased gradually through the spring until peaking in the summer months.  The smallest difference between total rides of both groups was in July - less than 2%, and the greatest difference - almost 60% - was in January.
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ec0acbf7-378d-4d34-b2ac-0809aa9889fa)
 
-Members and casuals had the least difference in total rides taken over the weekend - less than 2% - and Sunday is the only day of the week that casuals had more rides than members.  Throughout the week, rides taken by both groups had an inverse relationship with member rides increasing and peaking in the middle of the week and casual rides declining to the lowest levels during the same time period.
+Members and casual riders had the least difference in total rides taken over the weekend - less than 2% - and Sunday is the only day of the week that casual riders had more rides than members.  Throughout the week, rides taken by both groups had an inverse relationship with member rides increasing and peaking in the middle of the week and casual rides declining to the lowest levels during the same time period.
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/2dbcbc08-ca51-4491-ba25-d22c088216fc)
 
-Members and casuals followed a slightly difference trend in an average 24 hour day.  Casual total rides increased gradually through the morning hours and peaked at 5 pm.  Member rides also peaked at 5 pm, but a ride spike was also observed at 8 am before dropping and increasing again in the afternoon.
+Members and casual riders followed a slightly different trend in an average 24 hour day.  Casual rider total rides increased gradually through the morning hours and peaked at 5 pm.  Member rides also peaked at 5 pm, but a ride spike was also observed at 8 am before dropping and increasing again in the afternoon.
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/4bab800f-6141-4132-8327-3ab1a0588e97)
 
-For every month of the year, the casual average ride length (in minutes) was more than double the member average ride length.
+For every month of the year, the casual rider average ride length (in minutes) was more than double the member average ride length.
 
-![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/56c1b78b-8a11-4785-9517-a4bcdd1de16b)
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/5a035a09-868d-4246-b18d-2fd86e10cc7e)
 
-Member rides were evenly split between electric and class bikes, while casual rides had a slight preference for electric bikes.
+Member rides were evenly split between electric and classic bikes, while casual rides had a slight preference for electric bikes.
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/b7413f69-7b9b-4e0e-9beb-711d294e3f83)
 
+
+
 #### Central Tendency
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ef93faea-bfc5-4304-a8d3-c0a3c91519d6)
 
