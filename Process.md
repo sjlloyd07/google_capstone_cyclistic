@@ -69,3 +69,6 @@ The final spreadsheets ready for consolidation and analysis contain the columns 
 | ride_id | rideable_type	| date | day_of_week | hour_of_day | ride_length	| start_station_name	| end_station_name	| member_casual |
 | --- | ---	| --- | ---	| ---	| ---	| ---	| ---	| ---	|
 
+<br>
+
+A description of the dataset analysis can be found here: [Analysis](Analysis.md)
