@@ -22,3 +22,7 @@ The data is:
 - **comprehensive** - data contains all relevant metrics required for intended analysis focused on product use comparison between two variables (casual users/members) over a period of time
 - **current** - up-to-date to the month previous to the beginning of this analysis
 - **cited** - acquired using internally defined, trustworthy methods of collection
+
+<br>
+
+A detailed description of the cleaning and manipulation process can be found here: [Cleaning & Manipulation](Process.md)
