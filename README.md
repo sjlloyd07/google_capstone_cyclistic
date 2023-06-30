@@ -196,7 +196,14 @@ Of the over 6 million records in the dataset, 5.2 million records had geographic
 ![dash-screenshot](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/9bf71597-5bf4-41cb-b386-b6f7ea4f074d)
 
 ### Act
-Although the number of rides taken for both groups show similar trends over the course of the year corresponding with seasonal weather, the average number of rides taken over a typical week and during a typical day vary greatly.  From the inverse relationship that member rides and casual rides have over the week, as well as the spikes during typical commuting times during the day, we can conclude that Cyclistic members are more likely to use the bikes to commute to employment, and casual riders are more likely to use the bikes for leisure activities.  Evidence for this conclusion can also be seen with the more popular departure stations for each group where casual riders take more rides to local attractions than members.
+Although the number of rides taken for both groups show similar trends over the course of the year corresponding with seasonal weather, the average number of rides taken over a typical week and during a typical day vary greatly.  From the inverse relationship that member rides and casual rides have over the week, as well as the spikes during typical commuting times during the day, we can conclude that Cyclistic members are more likely to use the bikes for commuting, and casual riders are more likely to use the bikes for leisure activities.  Evidence for this conclusion can also be seen with the more popular departure stations for each group where casual riders take more rides to local attractions than members.  
+
+Based on this analysis, I can provide three recommendations for how the marketing team may proceed:
+- Provide additional marketing for the membership plan at the most popular casual rider bike stations.
+- Provide membership discounts for rides taken to/from the most popular local attractions.
+- Provide membership incentives for bike rental during off-season months and less popular days of the week.
+
+Future data collection techniques may take into consideration that data that contains secure, unique identifying rider information could be beneficial in order to market the membership plan to high volumne casual riders.
 
 
 
