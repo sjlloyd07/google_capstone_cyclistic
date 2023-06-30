@@ -1,4 +1,5 @@
-### Company
+### Introduction
+#### Company
   In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that
 are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and
 returned to any other station in the system anytime.
@@ -19,12 +20,6 @@ do that, however, the marketing analyst team needs to better understand how annu
 casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are
 interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
-### Assignment Details
-#### Three questions will guide the future marketing program:
-1. How do annual members and casual riders use Cyclistic bikes differently?
-2. Why would casual riders buy Cyclistic annual memberships?
-3. How can Cyclistic use digital media to influence casual riders to become members?
-
 #### Stakeholders:
 - Lily Moreno - Director of Marketing
 - Cyclistic Marketing Analytics Team
@@ -40,8 +35,8 @@ interested in analyzing the Cyclistic historical bike trip data to identify tren
 5. Supporting visualizations and key findings
 6. Your top three recommendations based on your analysis
 
-### ASK
 **Problem:** A large percentage of Cyclistic users are casual riders.  The executive team wants to convert casual riders into members.
+
 **Goal:** Identify how casaul riders and members use Cyclistic products.  How customers use Cyclstic products includes date/time of use, duration, product type, and location.
 
 **Questions to Answer:** 
