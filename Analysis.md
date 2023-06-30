@@ -33,3 +33,9 @@ Of the over 6 million records in the dataset, 5.2 million records had geographic
 
 #### Central Tendency
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ef93faea-bfc5-4304-a8d3-c0a3c91519d6)
+
+<br>
+
+### Report
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/6668eb85-e9c8-4b21-af9c-296345c9ec6f)
+
