@@ -184,8 +184,9 @@ Member rides were evenly split between electric and classic bikes, while casual 
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/b7413f69-7b9b-4e0e-9beb-711d294e3f83)
 
-Of the over 6 million records in the dataset, 5.2 million records had geographic location data that was analysed for the purpose of comparison between the members and casual riders.  A list containing the top 10 station names sorted greatest to least by total rides taken from each departure station was compiled for each group.  One station was found on each list.
+Of the over 6 million records in the dataset, 5.2 million records had geographic location data that was analyzed for the purpose of comparison between the members and casual riders.  A list containing the top 10 station names sorted greatest to least by total rides taken from each departure station was compiled for each group.  The lists had one station commonality.
 
+![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/c7454fc1-a45b-4fd4-8c7e-d90667a23aaa)
 
 #### Central Tendency
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/ef93faea-bfc5-4304-a8d3-c0a3c91519d6)
@@ -195,4 +196,4 @@ Of the over 6 million records in the dataset, 5.2 million records had geographic
 ![dash-screenshot](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/9bf71597-5bf4-41cb-b386-b6f7ea4f074d)
 
 ### Act
-
+Though the number of rides taken for both groups show similar trends over the course of the year corresponding with seasonal weather, the average number of rides taken over a typical week and during a typical day vary greatly.  From the inverse relationship that member rides and casual rides have over the week, as well as the spikes during typical commuting times during the day, we can conclude that Cyclistic members are more likely to use the bikes to commute to employment, and casual riders are more likely to use the bikes for leisure activities.  Evidence for this conclusion can also be seen with the more popular departure stations for each group where casual riders take more rides to local attractions than members.
