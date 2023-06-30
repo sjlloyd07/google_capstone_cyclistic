@@ -184,6 +184,7 @@ Member rides were evenly split between electric and classic bikes, while casual 
 
 ![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/b7413f69-7b9b-4e0e-9beb-711d294e3f83)
 
+Of the over 6 million records in the dataset, 5.2 million records had geographic location data that was analysed for the purpose of comparison between the members and casual riders.  A list containing the top 10 station names sorted greatest to least by total rides taken from each departure station was compiled for each group.  One station was found on each list.
 
 
 #### Central Tendency
@@ -191,5 +192,7 @@ Member rides were evenly split between electric and classic bikes, while casual 
 
 
 ### Share
-![image](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/6c571d8a-8733-4802-a5ac-91ee1b46f40b)
+![dash-screenshot](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/9bf71597-5bf4-41cb-b386-b6f7ea4f074d)
+
+### Act
 
