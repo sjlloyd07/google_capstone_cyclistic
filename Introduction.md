@@ -52,3 +52,6 @@ interested in analyzing the Cyclistic historical bike trip data to identify tren
 
 #### Busisness Task:
 Identify trends of how casual riders and Cyclistic members used bikes over the previous year and present a visualization of the comparison clearly for stakeholders.
+
+
+The steps taken to prepare the data for analysis can be found here: [Preparation](Preparation.md).
