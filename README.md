@@ -196,4 +196,8 @@ Of the over 6 million records in the dataset, 5.2 million records had geographic
 ![dash-screenshot](https://github.com/sjlloyd07/google_capstone_cyclistic/assets/97957522/9bf71597-5bf4-41cb-b386-b6f7ea4f074d)
 
 ### Act
-Though the number of rides taken for both groups show similar trends over the course of the year corresponding with seasonal weather, the average number of rides taken over a typical week and during a typical day vary greatly.  From the inverse relationship that member rides and casual rides have over the week, as well as the spikes during typical commuting times during the day, we can conclude that Cyclistic members are more likely to use the bikes to commute to employment, and casual riders are more likely to use the bikes for leisure activities.  Evidence for this conclusion can also be seen with the more popular departure stations for each group where casual riders take more rides to local attractions than members.
+Although the number of rides taken for both groups show similar trends over the course of the year corresponding with seasonal weather, the average number of rides taken over a typical week and during a typical day vary greatly.  From the inverse relationship that member rides and casual rides have over the week, as well as the spikes during typical commuting times during the day, we can conclude that Cyclistic members are more likely to use the bikes to commute to employment, and casual riders are more likely to use the bikes for leisure activities.  Evidence for this conclusion can also be seen with the more popular departure stations for each group where casual riders take more rides to local attractions than members.
+
+
+
+
